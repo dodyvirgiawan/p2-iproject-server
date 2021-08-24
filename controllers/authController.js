@@ -8,7 +8,12 @@ class AuthController {
     static async registerUser(req, res, next) {
         try {
             const { first_name, last_name, email, password } = req.body
-            const createdUser = await User.create({ first_name, last_name, email, password })
+            const createdUser = await User.create({ 
+                first_name, 
+                last_name, 
+                email, 
+                password 
+            })
             
             res.status(201).json({
                 id: createdUser.id, 
