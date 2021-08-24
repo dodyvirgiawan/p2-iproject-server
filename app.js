@@ -20,7 +20,7 @@ io.on('connection', socket => {
     })
 
     socket.on('loginChat', user => {
-        loggedInChatUsers.push(user)
+        if(!loggedInChatUsers.find(el => el === user)) loggedInChatUsers.push(user)
         io.emit('syncLoggedInChatUser', loggedInChatUsers)
     })
 
