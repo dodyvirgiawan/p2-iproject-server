@@ -11,7 +11,7 @@ In order to access all of our resource endpoints, you must have a valid account 
 
 &nbsp;
 
-## **1. POST /login**
+## **1. POST /register**
 Use this endpoint to register. Don't worry, your password is safely hashed into our database.
 
 &nbsp;
