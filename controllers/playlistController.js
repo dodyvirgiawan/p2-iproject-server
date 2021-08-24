@@ -14,11 +14,11 @@ class PlaylistController {
                     {
                         model: User,
                         as: 'author',
-                        attributes: ['first_name', 'last_name', 'email']
+                        attributes: ['id', 'first_name', 'last_name', 'email']
                     },
                     {
                         model: Comment,
-                        attributes: ['comment', 'createdAt'],
+                        attributes: ['id', 'comment', 'createdAt'],
                         include: {
                             model: User,
                             as: 'author',
@@ -27,7 +27,7 @@ class PlaylistController {
                     },
                     {
                         model: Movie,
-                        attributes: ['title', 'genre', 'runtime', 'director', 'imdbRating', 'posterUrl'],
+                        attributes: ['id', 'title', 'genre', 'runtime', 'director', 'imdbRating', 'posterUrl'],
                         through: {
                             attributes: []
                         }
@@ -86,11 +86,11 @@ class PlaylistController {
                         where: {
                             email: req.user.email
                         },
-                        attributes: ['first_name', 'last_name', 'email']
+                        attributes: ['id', 'first_name', 'last_name', 'email']
                     },
                     {
                         model: Comment,
-                        attributes: ['comment', 'createdAt'],
+                        attributes: ['id', 'comment', 'createdAt'],
                         include: {
                             model: User,
                             as: 'author',
@@ -99,7 +99,7 @@ class PlaylistController {
                     },
                     {
                         model: Movie,
-                        attributes: ['title', 'genre', 'runtime', 'director', 'imdbRating', 'posterUrl'],
+                        attributes: ['id', 'title', 'genre', 'runtime', 'director', 'imdbRating', 'posterUrl'],
                         through: {
                             attributes: []
                         }
@@ -132,11 +132,11 @@ class PlaylistController {
                     {
                         model: User,
                         as: 'author',
-                        attributes: ['first_name', 'last_name', 'email']
+                        attributes: ['id', 'first_name', 'last_name', 'email']
                     },
                     {
                         model: Comment,
-                        attributes: ['comment', 'createdAt'],
+                        attributes: ['id', 'comment', 'createdAt'],
                         include: {
                             model: User,
                             as: 'author',
@@ -145,7 +145,7 @@ class PlaylistController {
                     },
                     {
                         model: Movie,
-                        attributes: ['title', 'genre', 'runtime', 'director', 'imdbRating', 'posterUrl'],
+                        attributes: ['id', 'title', 'genre', 'runtime', 'director', 'imdbRating', 'posterUrl'],
                         through: {
                             attributes: []
                         }
