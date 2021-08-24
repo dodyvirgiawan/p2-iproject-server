@@ -190,6 +190,7 @@ Notes: Playlist will be sorted from newest created first.
         "description": "Hey guys! This is an awesome playlist about action movies. What do you guys think?",
         "createdAt": "2021-08-23T13:48:06.389Z",
         "author": {
+            "id": 1,
             "first_name": "Rachel",
             "last_name": "Greene",
             "email": "rachelgreene@email.com"
@@ -197,6 +198,7 @@ Notes: Playlist will be sorted from newest created first.
         "Comments": [],
         "Movies": [
             {
+                "id": 1,
                 "title": "Dunkirk",
                 "genre": "Action",
                 "runtime": 106,
@@ -212,12 +214,14 @@ Notes: Playlist will be sorted from newest created first.
         "description": "Hello guys! Today I will be sharing my awesome movie playlist for you to watch during weekend. For me, these movies are really great to watch, especially when you are spending your time with your family. What do you think?",
         "createdAt": "2021-08-23T13:47:41.302Z",
         "author": {
+            "id": 2,
             "first_name": "John",
             "last_name": "Doe",
             "email": "johndoe@email.com"
         },
         "Comments": [
             {
+                "id": 1,
                 "comment": "Wow! Awesome list! Will be sure to watch with my family during the weekend.",
                 "createdAt": "2021-08-23T13:47:41.328Z",
                 "author": {
@@ -227,6 +231,7 @@ Notes: Playlist will be sorted from newest created first.
                 }
             },
             {
+                "id": 2,
                 "comment": "Great collections!",
                 "createdAt": "2021-08-23T13:47:41.328Z",
                 "author": {
@@ -238,6 +243,7 @@ Notes: Playlist will be sorted from newest created first.
         ],
         "Movies": [
             {
+                "id": 2,
                 "title": "Blade Runner 2049",
                 "genre": "Action",
                 "runtime": 164,
@@ -246,6 +252,7 @@ Notes: Playlist will be sorted from newest created first.
                 "posterUrl": "https://upload.wikimedia.org/wikipedia/id/f/f2/Blade_Runner_2049_Poster.jpg"
             },
             {
+                "id": 3,
                 "title": "Ready Player One",
                 "genre": "Science Fiction",
                 "runtime": 140,
@@ -295,6 +302,7 @@ not needed
         "description": "Hey guys! This is an awesome playlist about action movies. What do you guys think?",
         "createdAt": "2021-08-23T13:48:06.389Z",
         "author": {
+            "id": 1,
             "first_name": "Rachel",
             "last_name": "Greene",
             "email": "rachelgreene@email.com"
@@ -302,6 +310,7 @@ not needed
         "Comments": [],
         "Movies": [
             {
+                "id": 1,
                 "title": "Dunkirk",
                 "genre": "Action",
                 "runtime": 106,
@@ -317,24 +326,29 @@ not needed
         "description": "Hello guys! Today I will be sharing my awesome movie playlist for you to watch during weekend. For me, these movies are really great to watch, especially when you are spending your time with your family. What do you think?",
         "createdAt": "2021-08-23T13:47:41.302Z",
         "author": {
+            "id": 1,
             "first_name": "Rachel",
             "last_name": "Greene",
             "email": "rachelgreene@email.com"
         },
         "Comments": [
             {
+                "id": 1,
                 "comment": "Wow! Awesome list! Will be sure to watch with my family during the weekend.",
                 "createdAt": "2021-08-23T13:47:41.328Z",
                 "author": {
+                    "id": 2,
                     "first_name": "Joey",
                     "last_name": "Tribbiani",
                     "email": "joeytribbiani@email.com"
                 }
             },
             {
+                "id": 2,
                 "comment": "Great collections!",
                 "createdAt": "2021-08-23T13:47:41.328Z",
                 "author": {
+                    "id": 1,
                     "first_name": "Rachel",
                     "last_name": "Greene",
                     "email": "rachelgreene@email.com"
@@ -343,6 +357,7 @@ not needed
         ],
         "Movies": [
             {
+                "id": 1,
                 "title": "Blade Runner 2049",
                 "genre": "Action",
                 "runtime": 164,
@@ -351,6 +366,7 @@ not needed
                 "posterUrl": "https://upload.wikimedia.org/wikipedia/id/f/f2/Blade_Runner_2049_Poster.jpg"
             },
             {
+                "id": 2,
                 "title": "Ready Player One",
                 "genre": "Science Fiction",
                 "runtime": 140,
@@ -406,6 +422,7 @@ not needed
     "description": "Hey guys! This is an awesome playlist about action movies. What do you guys think?",
     "createdAt": "2021-08-23T13:48:06.389Z",
     "author": {
+        "id": 1,
         "first_name": "Rachel",
         "last_name": "Greene",
         "email": "rachelgreene@email.com"
@@ -413,6 +430,7 @@ not needed
     "Comments": [],
     "Movies": [
         {
+            "id": 1,
             "title": "Dunkirk",
             "genre": "Action",
             "runtime": 106,
