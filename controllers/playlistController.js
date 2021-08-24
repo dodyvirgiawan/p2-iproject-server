@@ -1,7 +1,7 @@
 const { Playlist, User, Comment, Movie } = require('../models')
 
 class PlaylistController {
-    static async getAllPlaylists(req, res, next) { //! Todo: Pagination, query by author & title (kalau sempet)
+    static async getAllPlaylists(req, res, next) {
         try {
             const playlists = await Playlist.findAll({
                 order: [
@@ -70,7 +70,7 @@ class PlaylistController {
         }
     }
 
-    static async getUserPlaylist(req, res, next) { //! Todo: Pagination, query by author & title (kalau sempet)
+    static async getUserPlaylist(req, res, next) {
         try {
             const playlists = await Playlist.findAll({
                 order: [
@@ -173,7 +173,13 @@ class PlaylistController {
             if(!foundPlaylist) {
                 throw({name: 'PlaylistNotFound'})
             } else {
-                await Playlist.update({title, description}, {where: { id: playlistId }})
+                await Playlist.update({title, description}, {
+                    where: { 
+                        id: playlistId 
+                    },
+                    individualHooks: true
+                })
+
                 res.status(200).json({message: 'Playlist successfully updated!'})
             }
         } catch (err) {

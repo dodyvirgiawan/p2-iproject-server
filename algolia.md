@@ -1,9 +1,15 @@
-const algoliasearch = require('algoliasearch')
-const client = algoliasearch('9X0YUSI3R8', 'fc17c7bb8f541b1d620570ddeea48673') //! Change to process.env.ALGOLIA_API_KEY later
-const index = client.initIndex('cineclub')
+# Sample format to be sent to algolia
 
-const testData = {
-    objectID: 3,
+Notes:
+- **Searchable attributes**: title, description, movie.title, movie.genre, authors info
+- **Filtering/faceting attributes**: movie.genre, movie.director, movie.imdbRating
+
+&nbsp;
+
+Per record:
+```
+{
+    objectID: 3, // objectID is playlistId in database.
     title: "Testing",
     description: "Hello guys! This is testing.",
     author: {
@@ -30,5 +36,4 @@ const testData = {
         }
     ]
 }
-
-index.saveObject(testData, { autoGenerateObjectIDIfNotExist: true });
+```
