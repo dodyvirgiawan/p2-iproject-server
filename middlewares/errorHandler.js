@@ -2,9 +2,6 @@ function errorHandler(err, req, res, next) {
     let code = null
     let message = null
 
-    console.log(err, '<<< whole error')
-    console.log(err.name, '<<< error name')
-
     switch(err.name) {
         case 'SequelizeValidationError':
             code = 400
