@@ -41,7 +41,7 @@ class PlaylistController {
         }
     }
 
-    static async addPlaylist(req, res, next) { //! First initial creation of playlist + included movie (source from API)
+    static async addPlaylist(req, res, next) { //? First initial creation of playlist + included movie (source from API)
         try {
             const { playlist_title, playlist_description, movie_title, movie_genre, movie_runtime, movie_director, movie_imdbRating, movie_posterUrl } = req.body
 

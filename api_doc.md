@@ -550,6 +550,17 @@ id = [integer]
     "message": "Your comment has been successfully added!"
 }
 ```
+
+### **Response (400) - BAD REQUEST**
+You did not specify the comment/the comment is empty.
+```
+{
+    "message": [
+        'Please type the comment'
+    ]
+}
+```
+
 ### **Response (401) - UNAUTHORIZED**
 You did not specify the access token, or your token is invalid.
 ```

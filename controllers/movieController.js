@@ -1,7 +1,7 @@
 const { Movie } = require('../models')
 
 class MovieController {
-    static async addMovieToPlaylist(req, res, next) {  //! Add movie after initial creation (Source can be either from Manual Input or OMDB Api, bebas tergantung front end)
+    static async addMovieToPlaylist(req, res, next) {  //? Add movie after initial creation (Source can be either from Manual Input or OMDB Api, bebas tergantung front end)
         try {
             const { title, genre, runtime, director, imdbRating, posterUrl } = req.body
             const playlistId = +req.params.id
