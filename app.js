@@ -14,6 +14,8 @@ let loggedInChatUsers = []
 const messageHistory = []
 
 io.on('connection', socket => { 
+    io.emit('syncMessage', messageHistory)
+
     socket.on('sendMessage', message => {
         messageHistory.push(message)
         io.emit('syncMessage', messageHistory)
