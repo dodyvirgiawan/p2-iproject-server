@@ -145,7 +145,8 @@ not needed
     "id": 1,
     "first_name": "Dody",
     "last_name": "Virgiawan",
-    "email": "dody@email.com"
+    "email": "dody@email.com",
+    "isGoogleUser": "false"
 }
 ```
 
