@@ -1,6 +1,6 @@
 const { User } = require('../models')
 const { comparePassword } = require('../helpers/bcrypt.js')
-const { signToken } = require('../helpers/jwt.js')
+const { signToken, verifyToken } = require('../helpers/jwt.js')
 const { OAuth2Client } = require('google-auth-library');
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
@@ -67,7 +67,7 @@ class AuthController {
                 audience: process.env.GOOGLE_CLIENT_ID,
             })
 
-            const { email, picture, given_name, family_name } = ticket.getPayload()
+            const { email, given_name, family_name } = ticket.getPayload()
     
             const [user, created] = await User.findOrCreate({
                 where: { email },
@@ -84,8 +84,7 @@ class AuthController {
                 first_name: user.first_name,
                 last_name: user.last_name,
                 email: user.email,
-                isGoogleUser: true,
-                picture
+                isGoogleUser: true
             })
 
             res.status(201).json({ access_token })
@@ -96,7 +95,16 @@ class AuthController {
 
     static async getLoggedInUserInfo(req, res, next) { 
         try {
-           res.status(200).json(req.user)
+            const payload = verifyToken(req.headers.access_token) 
+            const {id, first_name, last_name, email, isGoogleUser} = payload
+            
+            const foundUser = await User.findOne({where: {id, first_name, last_name, email}})
+
+            if(!foundUser) {
+                throw({name: 'InvalidToken'})
+            } else {
+                res.status(200).json({id, first_name, last_name, email, isGoogleUser}) 
+            }
         } catch (err) {
             next(err)
         }
