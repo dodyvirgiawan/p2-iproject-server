@@ -45,6 +45,9 @@ module.exports = (sequelize, DataTypes) => {
                 },
                 notEmpty: {
                     msg: 'Runtime is required'
+                },
+                isNumeric: {
+                    msg: 'Runtime must be in numeric format'
                 }
             }
         },
@@ -69,6 +72,9 @@ module.exports = (sequelize, DataTypes) => {
                 },
                 notEmpty: {
                     msg: 'IMDB Rating is required'
+                },
+                isNumeric: {
+                    msg: 'IMDB Rating must be in numeric format'
                 }
             }
         },
